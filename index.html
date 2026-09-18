@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahabub | Birthday Website</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#080a16;color:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}.nav{position:fixed;top:0;left:0;right:0;z-index:10;background:#080a16dd;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff18}
+.navin{max-width:1100px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:800}.logo b{color:#ffd166}
+.links{display:flex;gap:18px;list-style:none}.links a{font-size:14px}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:100px 20px 50px;
+background:radial-gradient(circle at 20% 20%,#ff5b922f,transparent 35%),radial-gradient(circle at 80% 30%,#685cff38,transparent 35%),linear-gradient(135deg,#080a16,#151a36 55%,#090a14)}
+.hero h1{font-size:clamp(50px,10vw,100px);line-height:1.02;margin:20px 0 12px}
+.grad{background:linear-gradient(90deg,#fff,#ffd166,#ff7aa8,#9c8cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.badge{display:inline-block;padding:8px 15px;border:1px solid #ffffff25;border-radius:999px;background:#ffffff0d}
+.hero p{opacity:.8;font-size:18px}.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 20px;border-radius:12px;background:white;color:#111;font-weight:700}.btn.alt{background:#ffffff10;color:white;border:1px solid #ffffff20}
+section{padding:85px 20px}.container{max-width:1100px;margin:auto}.title{text-align:center;margin-bottom:35px}.title h2{font-size:38px}.title p{opacity:.65}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}.card{background:#ffffff0a;border:1px solid #ffffff14;border-radius:22px;padding:25px}
+.profile{width:100%;max-width:430px;height:430px;object-fit:cover;border-radius:20px;display:block;margin:auto}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:25px}.count{background:#ffffff0a;border:1px solid #ffffff12;border-radius:17px;text-align:center;padding:20px 8px}
+.count strong{display:block;font-size:36px}.count span{font-size:12px;opacity:.6;text-transform:uppercase}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.gallery img{width:100%;height:320px;object-fit:cover;border-radius:18px;cursor:pointer;transition:.25s}.gallery img:hover{transform:scale(1.02)}
+.video{max-width:850px;margin:auto}.video video{width:100%;border-radius:18px;background:#000}.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.social{padding:12px 16px;border-radius:12px;background:#ffffff0b;border:1px solid #ffffff14}
+footer{text-align:center;padding:35px 20px;border-top:1px solid #ffffff12;opacity:.7}
+.modal{position:fixed;inset:0;background:#000e;z-index:20;display:none;place-items:center;padding:20px}.modal.show{display:grid}.modal img{max-width:95vw;max-height:90vh;border-radius:16px}.close{position:fixed;right:20px;top:15px;color:white;background:none;border:0;font-size:34px}
+@media(max-width:760px){.links{display:none;position:absolute;top:60px;left:12px;right:12px;flex-direction:column;background:#11152a;padding:18px;border-radius:16px}.links.open{display:flex}.menu{display:block}.grid2{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:220px}.countdown{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.gallery{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="navin"><a class="logo" href="#home">Mahabub<b>❤</b></a><button class="menu" id="menu">☰</button>
+<ul class="links" id="links"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#birthday">Birthday</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#video">Video</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero" id="home"><div><div class="badge">🎂 17 September • Birthday Special</div>
+<h1><span class="grad">Happy Birthday</span><br>Mahabub</h1>
+<p>A personal website for memories, photos, birthday countdown and video.</p>
+<div class="buttons"><a class="btn" href="#birthday">🎉 Countdown</a><a class="btn alt" href="#gallery">📸 Gallery</a></div></div></header>
+
+<section id="about"><div class="container"><div class="title"><h2>About Me</h2><p>A simple personal space for Mahabub</p></div>
+<div class="grid2"><div class="card"><img class="profile" src="assets/photo3.png" alt="Mahabub"></div>
+<div class="card"><h3 style="font-size:30px">Hello, I'm Mahabub 👋</h3><p style="opacity:.78;margin-top:10px">Welcome to my personal website. You can use this site as a birthday page, personal profile, photo gallery and project showcase.</p>
+<div class="socials"><a class="social" href="#birthday">🎂 Birthday</a><a class="social" href="#gallery">📸 Gallery</a><a class="social" href="#video">🎬 Video</a></div></div></div></div></section>
+
+<section id="birthday"><div class="container"><div class="title"><h2>🎂 Birthday Countdown</h2><p>Counting down to 17 September</p></div>
+<div class="card" style="text-align:center"><h3 style="font-size:28px">Next Birthday</h3><div class="countdown">
+<div class="count"><strong id="days">00</strong><span>Days</span></div><div class="count"><strong id="hours">00</strong><span>Hours</span></div><div class="count"><strong id="mins">00</strong><span>Minutes</span></div><div class="count"><strong id="secs">00</strong><span>Seconds</span></div></div><p id="msg" style="margin-top:20px;opacity:.7"></p></div></div></section>
+
+<section id="gallery"><div class="container"><div class="title"><h2>📸 Birthday Gallery</h2><p>Your special memories</p></div>
+<div class="gallery"><img src="assets/photo1.jpg" alt="Birthday cake" onclick="openImg(this.src)"><img src="assets/photo2.jpg" alt="Birthday cake" onclick="openImg(this.src)"><img src="assets/photo3.png" alt="Mahabub" onclick="openImg(this.src)"></div></div></section>
+
+<section id="video"><div class="container"><div class="title"><h2>🎬 Birthday Video</h2><p>Happy Birthday Mahabub</p></div><div class="video card"><video controls playsinline poster="assets/photo3.png"><source src="assets/birthday-video.mp4" type="video/mp4"></video></div></div></section>
+
+<section id="contact"><div class="container"><div class="title"><h2>🌐 My Links</h2><p>Replace these # links with your social profiles</p></div>
+<div class="grid2"><div class="card"><h3 style="font-size:25px">Find Me Online</h3><div class="socials">
+<a class="social" href="#">📘 Facebook</a><a class="social" href="#">▶️ YouTube</a><a class="social" href="#">🎵 TikTok</a><a class="social" href="#">💻 GitHub</a></div></div>
+<div class="card"><h3 style="font-size:25px">Birthday Wish 💌</h3><p style="opacity:.75;margin-top:10px">Add your bio, email, projects, skills or other information here.</p></div></div></div></section>
+
+<footer>© <span id="year"></span> Mahabub • Made with ❤️</footer>
+<div class="modal" id="modal" onclick="closeImg()"><button class="close">×</button><img id="modalImg" alt=""></div>
+
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.onclick=()=>links.classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+function nextBirthday(){const now=new Date(),y=now.getFullYear();let d=new Date(y,8,17);if(d<=now)d=new Date(y+1,8,17);return d}
+function update(){const diff=Math.max(0,nextBirthday()-new Date()),s=Math.floor(diff/1000);
+document.getElementById('days').textContent=String(Math.floor(s/86400)).padStart(2,'0');
+document.getElementById('hours').textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');
+document.getElementById('mins').textContent=String(Math.floor(s%3600/60)).padStart(2,'0');
+document.getElementById('secs').textContent=String(s%60).padStart(2,'0');
+document.getElementById('msg').textContent='Next birthday: '+nextBirthday().toLocaleDateString(undefined,{day:'numeric',month:'long',year:'numeric'})}
+setInterval(update,1000);update();document.getElementById('year').textContent=new Date().getFullYear();
+function openImg(src){document.getElementById('modalImg').src=src;document.getElementById('modal').classList.add('show')}
+function closeImg(){document.getElementById('modal').classList.remove('show')}
+</script>
+</body>
+</html>
